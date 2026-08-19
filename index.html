@@ -27,7 +27,7 @@ body{margin:0}
 .demo-contact{background:var(--rose);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;padding:12px 30px;text-decoration:none;transition:background .25s ease}
 .demo-contact:hover{background:var(--charcoal)}
 .demo-burger{width:34px;height:24px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;background:none;border:none;padding:0}
-.demo-burger span{display:block;height:3px;background:var(--charcoal);border-radius:2px}
+.demo-burger span{display:block;height:3px;background:var(--cream);border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.35)}
 .demo-menu{display:none;position:absolute;top:100%;right:48px;margin-top:10px;background:var(--cream);box-shadow:0 18px 44px rgba(46,36,32,.18);padding:26px 36px;min-width:220px}
 .demo-menu.open{display:block}
 .demo-menu a{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--sand)}
@@ -111,13 +111,14 @@ body{margin:0}
 .bm-v2 .feature-content h3{font-style:italic;font-weight:600;font-size:38px;color:var(--cream);margin-bottom:16px}
 .bm-v2 .feature-content p{font-size:15px;line-height:1.6;color:#EFE6DD;margin-bottom:26px}
 
-.bm-v2 .treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:80px 72px;max-width:980px;margin:0 auto}
+.bm-v2 .treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px 56px;max-width:1180px;margin:0 auto}
 .bm-v2 .treat-card{position:relative;aspect-ratio:1/1;border-radius:2px;overflow:hidden;display:flex;align-items:flex-end;padding:30px}
 .bm-v2 .treat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .bm-v2 .treat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(196,136,122,0) 50%, rgba(166,116,102,.45) 100%)}
 .bm-v2 .treat-card span{position:relative;z-index:2;color:var(--cream);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;line-height:1.25}
 
-.bm-v2 .consult-strip{background:var(--rose);color:var(--cream);max-width:1180px;margin:64px auto 0;padding:38px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.bm-v2 .consult-strip{background:var(--rose);color:var(--cream);margin-top:64px;padding:38px 0}
+.bm-v2 .consult-strip-inner{max-width:1180px;margin:0 auto;padding:0 56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .bm-v2 .consult-strip h3{font-style:italic;font-weight:500;font-size:24px;color:var(--cream);margin-bottom:6px}
 .bm-v2 .consult-strip p{margin:0;font-size:13px;color:#F7EFE8;opacity:.9}
 .bm-v2 .consult-strip em{font-style:normal;font-weight:600}
@@ -134,10 +135,11 @@ body{margin:0}
 .bm-v2 .quote-card b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px}
 
 .bm-v2 .product-band{background:var(--rose)}
-.bm-v2 .product-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;max-width:1180px;margin:0 auto}
+.bm-v2 .product-inner{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;max-width:1180px;margin:0 auto}
 .bm-v2 .product-inner .img{height:440px;background-size:cover;background-position:center;background-image:url('https://www.beauty-by-megan.com/wp-content/uploads/2019/09/Producten-1.jpg')}
-.bm-v2 .product-inner h2{color:var(--cream);font-style:italic;font-weight:500;font-size:36px;margin-bottom:20px}
-.bm-v2 .product-inner p{color:#F7EFE8;margin-bottom:28px;line-height:1.6;font-size:15px}
+.bm-v2 .product-inner .kicker{margin-bottom:18px}
+.bm-v2 .product-inner h2{color:var(--cream);font-style:italic;font-weight:500;font-size:36px;margin-bottom:24px;line-height:1.25}
+.bm-v2 .product-inner p{color:#F7EFE8;margin-bottom:34px;line-height:1.75;font-size:15px;max-width:440px}
 
 .bm-v2 .gallery-strip{display:flex;gap:22px;overflow-x:auto;padding:6px 4px 20px;scroll-snap-type:x mandatory;max-width:1180px;margin:0 auto;scrollbar-color:var(--rose) var(--sand)}
 .bm-v2 .gallery-strip img{scroll-snap-align:start;flex:0 0 300px;height:360px;object-fit:cover;border-radius:2px}
@@ -147,7 +149,7 @@ body{margin:0}
 .bm-v2 .visit-wrap h2{font-style:italic;font-weight:500;font-size:36px;margin-bottom:28px}
 .bm-v2 .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .bm-v2 .visit-grid h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:600}
-.bm-v2 .visit-grid p{margin:0;font-style:italic;font-size:16px;color:var(--charcoal)}
+.bm-v2 .visit-grid p{margin:0;font-style:italic;font-size:13.5px;line-height:1.5;color:var(--charcoal)}
 
 /* ---- Footer (per Map.pdf design) ---- */
 .bm-v2 .footer{background:var(--rose);color:var(--cream);padding:80px 56px 40px}
@@ -176,11 +178,30 @@ body{margin:0}
   .bm-v2 .quote-grid{grid-template-columns:1fr}
   .bm-v2 .product-inner{grid-template-columns:1fr;gap:30px}
   .bm-v2 .product-inner .img{height:280px}
+  .bm-v2 .product-inner p{max-width:none}
   .bm-v2 .visit-wrap{grid-template-columns:1fr;gap:30px}
   .bm-v2 .visit-grid{grid-template-columns:1fr 1fr}
+  .bm-v2 .consult-strip-inner{padding:0 22px}
 }
 @media (max-width:560px){
   .bm-v2 .treat-grid{grid-template-columns:1fr}
+}
+
+/* ---- scroll-in animation ---- */
+.bm-v2 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)}
+.bm-v2 .reveal.in{opacity:1;transform:none}
+.bm-v2 .treat-grid .reveal:nth-child(2){transition-delay:.08s}
+.bm-v2 .treat-grid .reveal:nth-child(3){transition-delay:.16s}
+.bm-v2 .treat-grid .reveal:nth-child(4){transition-delay:.24s}
+.bm-v2 .treat-grid .reveal:nth-child(5){transition-delay:.32s}
+.bm-v2 .treat-grid .reveal:nth-child(6){transition-delay:.4s}
+.bm-v2 .quote-grid .reveal:nth-child(2){transition-delay:.1s}
+.bm-v2 .quote-grid .reveal:nth-child(3){transition-delay:.2s}
+.bm-v2 .gallery-strip .reveal:nth-child(2){transition-delay:.08s}
+.bm-v2 .gallery-strip .reveal:nth-child(3){transition-delay:.16s}
+.bm-v2 .gallery-strip .reveal:nth-child(4){transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  .bm-v2 .reveal{opacity:1;transform:none;transition:none}
 }
 </style>
 
@@ -205,12 +226,12 @@ body{margin:0}
 <div class="bm-v2">
   <span id="bm-v2-treatments" style="display:block;scroll-margin-top:90px"></span>
   <section>
-    <div class="section-head">
+    <div class="section-head reveal">
       <div class="kicker">What we do</div>
       <h2>Beauty treatments</h2>
     </div>
 
-    <div class="feature-card shadow-card">
+    <div class="feature-card shadow-card reveal">
       <div class="feature-content">
         <div class="eyebrow-row"><span>Signature</span><span>Aesthetic osteopathy</span></div>
         <h3>Structural Facial Lift</h3>
@@ -220,46 +241,48 @@ body{margin:0}
     </div>
 
     <div class="treat-grid">
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/gezichtsbehandelingen/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_A_001.jpg" alt="Facial treatment at Beauty by Megan"><span>Facials</span></a>
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/nails/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_B_001.jpg" alt="Nail treatment — BIAB and gel nails"><span>Nails</span></a>
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/laser-hair-removal/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Laser-ontharen-amsterdam-img1.webp" alt="Laser hair removal treatment"><span>Laser hair removal</span></a>
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/wenkbrauwen-wimpers/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_D_001.jpg" alt="Brow shaping and lash treatment"><span>Brows &amp; Lashes</span></a>
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/waxen-sugaring/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_E_001.jpg" alt="Waxing and sugaring treatment"><span>Waxing &amp; Sugaring</span></a>
-      <a class="treat-card shadow-card" href="/en/behandeling-groep/massage/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_C_001.jpg" alt="Relaxing massage treatment"><span>Massage</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/gezichtsbehandelingen/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_A_001.jpg" alt="Facial treatment at Beauty by Megan"><span>Facials</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/nails/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_B_001.jpg" alt="Nail treatment — BIAB and gel nails"><span>Nails</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/laser-hair-removal/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Laser-ontharen-amsterdam-img1.webp" alt="Laser hair removal treatment"><span>Laser hair removal</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/wenkbrauwen-wimpers/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_D_001.jpg" alt="Brow shaping and lash treatment"><span>Brows &amp; Lashes</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/waxen-sugaring/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_E_001.jpg" alt="Waxing and sugaring treatment"><span>Waxing &amp; Sugaring</span></a>
+      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/massage/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_C_001.jpg" alt="Relaxing massage treatment"><span>Massage</span></a>
     </div>
 
-    <div class="consult-strip shadow-card">
-      <div>
-        <h3>New here? Your first consultation is free.</h3>
-        <p><em>20 minutes</em> with Megan — skin analysis or laser intake. <em>No obligation.</em></p>
+    <div class="consult-strip full-bleed shadow-card">
+      <div class="consult-strip-inner">
+        <div>
+          <h3>New here? Your first consultation is free.</h3>
+          <p><em>20 minutes</em> with Megan — skin analysis or laser intake. <em>No obligation.</em></p>
+        </div>
+        <a class="btn btn-cream" href="/en/book/">Claim your free consultation</a>
       </div>
-      <a class="btn btn-cream" href="/en/book/">Claim your free consultation</a>
     </div>
   </section>
 </div>
 
 <div class="bm-v2">
   <section style="background:#EDE3D8">
-    <div class="section-head">
+    <div class="section-head reveal">
       <h2>What our clients say</h2>
     </div>
     <div class="testimonials-wrap">
-      <div class="rating-block">
+      <div class="rating-block reveal">
         <div class="num">4.6</div>
         <div class="stars">★★★★★</div>
         <div class="src">5k reviews on Treatwell</div>
         <a class="btn btn-outline" href="https://www.treatwell.nl/en/place/beauty-by-megan/" target="_blank" rel="noopener">Read our reviews</a>
       </div>
       <div class="quote-grid">
-        <div class="quote-card shadow-card">
+        <div class="quote-card shadow-card reveal">
           <p>"I have been coming here for 8 years. And it's the absolutely best place for beauty. Osteopathy facial and it changed my face. Highly recommend trying it."</p>
           <b>Ruth</b>
         </div>
-        <div class="quote-card shadow-card">
+        <div class="quote-card shadow-card reveal">
           <p>"I have been going to Beauty by Megan for many years now and I absolutely trust Megan. I tried her Facial Lymphatic Drainage Massage — it's not relaxing and can be painful, but the results are AMAZING."</p>
           <b>Bobby</b>
         </div>
-        <div class="quote-card shadow-card">
+        <div class="quote-card shadow-card reveal">
           <p>"My go to place in Amsterdam. I always go for BIAB and pedicure here. Ema and Shanin are top notch manicurists! Very professional and attentive to details."</p>
           <b>Jade</b>
         </div>
@@ -271,14 +294,14 @@ body{margin:0}
 <div class="bm-v2">
   <section class="product-band">
     <div class="product-inner">
-      <div>
+      <div class="reveal">
         <div class="kicker" style="color:#3a2c26">Skincare available at home</div>
         <h2>HydroPeptide, available in the salon</h2>
         <p>To get the most from your facials, we offer the full HydroPeptide range — peptide-driven skincare that supports collagen production and cell renewal. In the salon, we will advise the right products for your skin.</p>
         <!-- TODO: point this at the new Products page once it exists -->
         <a class="btn btn-cream" href="#">Browse our products</a>
       </div>
-      <div class="img shadow-card"></div>
+      <div class="img shadow-card reveal"></div>
     </div>
   </section>
 </div>
@@ -287,14 +310,14 @@ body{margin:0}
   <span id="bm-v2-gallery" style="display:block;scroll-margin-top:90px"></span>
   <section>
     <div class="kicker" style="text-align:center">Gallery</div>
-    <div class="section-head" style="margin-bottom:36px">
+    <div class="section-head reveal" style="margin-bottom:36px">
       <h2>Nail designs from the studio</h2>
     </div>
     <div class="gallery-strip">
-      <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img1.webp" alt="Nail design 1">
-      <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img2.webp" alt="Nail design 2">
-      <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Nagels.jpg" alt="Nail design 3">
-      <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Manicure.jpg" alt="Nail design 4">
+      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img1.webp" alt="Nail design 1">
+      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img2.webp" alt="Nail design 2">
+      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Nagels.jpg" alt="Nail design 3">
+      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Manicure.jpg" alt="Nail design 4">
     </div>
   </section>
 </div>
@@ -303,8 +326,8 @@ body{margin:0}
   <span id="bm-v2-visit" style="display:block;scroll-margin-top:90px"></span>
   <section>
     <div class="visit-wrap">
-      <iframe class="shadow-card" loading="lazy" src="https://www.google.com/maps?q=Overtoom+250,+1054+DP+Amsterdam,+Netherlands&output=embed"></iframe>
-      <div>
+      <iframe class="shadow-card reveal" loading="lazy" src="https://www.google.com/maps?q=Overtoom+250,+1054+DP+Amsterdam,+Netherlands&output=embed"></iframe>
+      <div class="reveal">
         <div class="kicker">Visit us</div>
         <h2>On the Overtoom, Amsterdam West</h2>
         <div class="visit-grid">
@@ -369,6 +392,22 @@ body{margin:0}
       window.scrollTo({top:y, behavior:'smooth'});
     });
   });
+
+  // scroll-in reveal animation
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
 })();
 </script>
 
