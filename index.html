@@ -17,14 +17,9 @@ body{margin:0}
   --cream:#F5EFE6;
 }
 /* ---- floating demo header — sits ON TOP of the hero photo ---- */
-.demo-header{position:absolute;top:44px;left:0;right:0;z-index:100;background:transparent;padding:26px 48px;display:flex;align-items:flex-start;justify-content:space-between;font-family:'Inter',sans-serif}
-.demo-lockup{display:flex;align-items:center;gap:16px;text-decoration:none}
-.demo-badge{width:74px;height:74px;border-radius:50%;background:var(--rose);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:34px;flex:none}
-.demo-word .top{font-size:26px;letter-spacing:.2em;color:var(--charcoal);font-weight:500}
-.demo-word .rule{height:2px;background:var(--rose);margin:5px 0;width:100%}
-.demo-word .bot{font-size:12px;letter-spacing:.42em;color:var(--charcoal)}
-.demo-word .tag{font-size:11px;color:#6B5D52;margin-top:6px;font-weight:400}
-.demo-word .tag i{font-family:'Cormorant Garamond',serif;font-style:italic}
+.demo-header{position:absolute;top:0;left:0;right:0;z-index:100;background:transparent;padding:30px 48px;display:flex;align-items:flex-start;justify-content:space-between;font-family:'Inter',sans-serif}
+.demo-lockup{display:block;text-decoration:none}
+.demo-logo{height:88px;width:auto;display:block}
 .demo-right{display:flex;align-items:center;gap:20px}
 .demo-pill{border:1px solid var(--charcoal);border-radius:999px;padding:3px;display:flex;font-size:11px;letter-spacing:.12em;background:rgba(245,239,230,.55)}
 .demo-pill span{padding:5px 13px;border-radius:999px;color:var(--charcoal)}
@@ -38,13 +33,9 @@ body{margin:0}
 .demo-menu a{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--sand)}
 .demo-menu a:last-child{border-bottom:none}
 .demo-menu a:hover{color:var(--rose)}
-.review-banner{background:var(--charcoal);color:var(--cream);text-align:center;font-family:'Inter',sans-serif;font-size:13px;padding:10px 16px;letter-spacing:.02em;position:relative;z-index:101}
 @media (max-width:820px){
-  .demo-header{padding:16px 20px;top:38px}
-  .demo-badge{width:52px;height:52px;font-size:24px}
-  .demo-word .top{font-size:18px}
-  .demo-word .bot{font-size:9px}
-  .demo-word .tag{display:none}
+  .demo-header{padding:16px 20px;top:0}
+  .demo-logo{height:56px}
   .demo-contact{padding:9px 18px;font-size:14px}
   .demo-right{gap:12px}
   .demo-menu{right:20px}
@@ -53,15 +44,9 @@ body{margin:0}
 </head>
 <body>
 
-<div class="review-banner">DESIGN REVIEW COPY — for sign-off only. Header shown here is a static mock, not the live site nav.</div>
-
 <div class="demo-header">
   <a class="demo-lockup" href="#">
-    <span class="demo-badge">BM</span>
-    <span class="demo-word">
-      <span class="top">BEAUTY</span><span class="rule"></span><span class="bot">BY MEGAN</span>
-      <span class="tag">Beauty, practiced. <i>Beauty, reimagined.</i></span>
-    </span>
+    <img class="demo-logo" src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_TAGLINE2_Warm-Espresso_1922x591px_001.svg" alt="Beauty by Megan — Beauty, practiced.">
   </a>
   <div class="demo-right">
     <span class="demo-pill"><span class="on">EN</span><span>NL</span></span>
@@ -126,10 +111,10 @@ body{margin:0}
 .bm-v2 .feature-content h3{font-style:italic;font-weight:600;font-size:38px;color:var(--cream);margin-bottom:16px}
 .bm-v2 .feature-content p{font-size:15px;line-height:1.6;color:#EFE6DD;margin-bottom:26px}
 
-.bm-v2 .treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 48px;max-width:1120px;margin:0 auto}
+.bm-v2 .treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:80px 72px;max-width:980px;margin:0 auto}
 .bm-v2 .treat-card{position:relative;aspect-ratio:1/1;border-radius:2px;overflow:hidden;display:flex;align-items:flex-end;padding:30px}
 .bm-v2 .treat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.bm-v2 .treat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(46,36,32,0) 45%, rgba(46,36,32,.55) 100%)}
+.bm-v2 .treat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(196,136,122,0) 50%, rgba(166,116,102,.45) 100%)}
 .bm-v2 .treat-card span{position:relative;z-index:2;color:var(--cream);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;line-height:1.25}
 
 .bm-v2 .consult-strip{background:var(--rose);color:var(--cream);max-width:1180px;margin:64px auto 0;padding:38px 48px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
@@ -163,6 +148,21 @@ body{margin:0}
 .bm-v2 .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .bm-v2 .visit-grid h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:600}
 .bm-v2 .visit-grid p{margin:0;font-style:italic;font-size:16px;color:var(--charcoal)}
+
+/* ---- Footer (per Map.pdf design) ---- */
+.bm-v2 .footer{background:var(--rose);color:var(--cream);padding:80px 56px 40px}
+.bm-v2 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto 56px;align-items:start}
+.bm-v2 .footer-logo-card{background:var(--cream);padding:18px 22px;display:inline-block}
+.bm-v2 .footer-logo-card img{height:64px;width:auto;display:block}
+.bm-v2 .footer h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);margin:0 0 20px;font-weight:600}
+.bm-v2 .footer a,.bm-v2 .footer p{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#F7EFE8;text-decoration:none;margin:0 0 10px;line-height:1.5}
+.bm-v2 .footer a:hover{color:var(--charcoal)}
+.bm-v2 .footer .copyright{text-align:center;font-family:'Inter',sans-serif;font-size:12px;font-style:normal;color:#F0E4DC;border-top:1px solid rgba(245,239,230,.35);padding-top:26px;max-width:1180px;margin:0 auto}
+.bm-v2 .footer .copyright a{display:inline;font-family:'Inter',sans-serif;font-style:normal;font-size:12px;color:#F0E4DC;margin:0}
+@media (max-width:900px){
+  .bm-v2 .footer{padding:56px 22px 30px}
+  .bm-v2 .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+}
 
 @media (max-width:900px){
   .bm-v2 section{padding:56px 22px}
@@ -215,7 +215,7 @@ body{margin:0}
         <div class="eyebrow-row"><span>Signature</span><span>Aesthetic osteopathy</span></div>
         <h3>Structural Facial Lift</h3>
         <p>No needles, no fillers. Intelligent hands-on work that releases deep fascial tension, rebalances symmetry and restores natural lift.</p>
-        <a class="btn btn-cream" href="/en/behandeling-groep/gezichtsbehandelingen/">Discover the lift</a>
+        <a class="btn btn-solid" href="/en/behandeling-groep/gezichtsbehandelingen/">Discover the lift</a>
       </div>
     </div>
 
@@ -316,6 +316,40 @@ body{margin:0}
       </div>
     </div>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo-card"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_TAGLINE2_Warm-Espresso_1922x591px_001.svg" alt="Beauty by Megan"></span>
+      </div>
+      <div>
+        <h4>Treatments</h4>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/">Structural Facial</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/">Facial</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/nails/">Nails &amp; BIAB</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/wenkbrauwen-wimpers/">Brows &amp; lashes</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/waxen-sugaring/">Waxing &amp; Sugaring</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/laser-hair-removal/">Laser hair removal</a>
+      </div>
+      <div>
+        <h4>Salon</h4>
+        <!-- TODO: link About Megan / Products / Gift cards once those pages exist -->
+        <a href="#">About Megan</a>
+        <a href="#">Products</a>
+        <a href="#">Gift cards</a>
+        <a href="https://www.beauty-by-megan.com/en/vacatures/">Vacancies</a>
+        <a href="#bm-v2-visit">Contacts</a>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>Overtoom 250<br>1054 DP Amsterdam</p>
+        <h4 style="margin-top:26px">Social</h4>
+        <a href="https://instagram.com/beauty_by_megan" target="_blank" rel="noopener">beauty_by_megan</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Beauty by Megan · <a href="https://www.beauty-by-megan.com/en/privacy-statement/">Privacy Statement</a></div>
+  </footer>
 </div>
 
 <script>
