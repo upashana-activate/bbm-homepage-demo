@@ -17,10 +17,12 @@ body{margin:0}
   --cream:#F5EFE6;
 }
 /* ---- floating demo header — sits ON TOP of the hero photo ---- */
-.demo-header{position:absolute;top:0;left:0;right:0;z-index:100;background:transparent;padding:30px 48px;display:flex;align-items:flex-start;justify-content:space-between;font-family:'Inter',sans-serif}
+.demo-header{position:absolute;top:0;left:0;right:0;z-index:100;background:transparent;padding:48px 64px;display:flex;align-items:flex-start;justify-content:space-between;font-family:'Inter',sans-serif}
 .demo-lockup{display:block;text-decoration:none}
-.demo-logo{height:88px;width:auto;display:block}
-.demo-right{display:flex;align-items:center;gap:20px}
+.demo-logo{height:100px;width:auto;display:block}
+.demo-tagline{margin:8px 0 0 112px;font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--charcoal);opacity:.7;letter-spacing:.01em}
+.demo-tagline em{font-style:italic}
+.demo-right{display:flex;align-items:center;gap:28px;padding-top:8px}
 .demo-pill{border:1px solid var(--charcoal);border-radius:999px;padding:3px;display:flex;font-size:11px;letter-spacing:.12em;background:rgba(245,239,230,.55)}
 .demo-pill span{padding:5px 13px;border-radius:999px;color:var(--charcoal)}
 .demo-pill span.on{background:var(--charcoal);color:var(--cream)}
@@ -34,10 +36,11 @@ body{margin:0}
 .demo-menu a:last-child{border-bottom:none}
 .demo-menu a:hover{color:var(--rose)}
 @media (max-width:820px){
-  .demo-header{padding:16px 20px;top:0}
-  .demo-logo{height:56px}
+  .demo-header{padding:20px 24px;top:0}
+  .demo-logo{height:60px}
+  .demo-tagline{margin-left:64px;font-size:10.5px}
   .demo-contact{padding:9px 18px;font-size:14px}
-  .demo-right{gap:12px}
+  .demo-right{gap:12px;padding-top:4px}
   .demo-menu{right:20px}
 }
 </style>
@@ -46,7 +49,8 @@ body{margin:0}
 
 <div class="demo-header">
   <a class="demo-lockup" href="#">
-    <img class="demo-logo" src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_TAGLINE2_Warm-Espresso_1922x591px_001.svg" alt="Beauty by Megan — Beauty, practiced.">
+    <img class="demo-logo" src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_Warm-Espresso_1876x591px_001.svg" alt="Beauty by Megan">
+    <div class="demo-tagline">Beauty, practiced. <em>Beauty, reimagined.</em></div>
   </a>
   <div class="demo-right">
     <span class="demo-pill"><span class="on">EN</span><span>NL</span></span>
@@ -141,8 +145,14 @@ body{margin:0}
 .bm-v2 .product-inner h2{color:var(--cream);font-style:italic;font-weight:500;font-size:36px;margin-bottom:24px;line-height:1.25}
 .bm-v2 .product-inner p{color:#F7EFE8;margin-bottom:34px;line-height:1.75;font-size:15px;max-width:440px}
 
-.bm-v2 .gallery-strip{display:flex;gap:22px;overflow-x:auto;padding:6px 4px 20px;scroll-snap-type:x mandatory;max-width:1180px;margin:0 auto;scrollbar-color:var(--rose) var(--sand)}
-.bm-v2 .gallery-strip img{scroll-snap-align:start;flex:0 0 300px;height:360px;object-fit:cover;border-radius:2px}
+.bm-v2 .gallery-strip{overflow:hidden;padding:6px 4px 20px;max-width:1180px;margin:0 auto}
+.bm-v2 .gallery-track{display:flex;gap:22px;width:max-content;animation:bm-gallery-scroll 26s linear infinite}
+.bm-v2 .gallery-strip:hover .gallery-track{animation-play-state:paused}
+.bm-v2 .gallery-track img{flex:0 0 300px;height:360px;object-fit:cover;border-radius:2px}
+@keyframes bm-gallery-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .bm-v2 .gallery-track{animation:none}
+}
 
 .bm-v2 .visit-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1180px;margin:0 auto;align-items:center}
 .bm-v2 .visit-wrap iframe{width:100%;height:420px;border:0;filter:grayscale(20%) contrast(1.02)}
@@ -154,7 +164,7 @@ body{margin:0}
 /* ---- Footer (per Map.pdf design) ---- */
 .bm-v2 .footer{background:var(--rose);color:var(--cream);padding:80px 56px 40px}
 .bm-v2 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto 56px;align-items:start}
-.bm-v2 .footer-logo-card{background:var(--cream);padding:18px 22px;display:inline-block}
+.bm-v2 .footer-logo-card{display:inline-block}
 .bm-v2 .footer-logo-card img{height:64px;width:auto;display:block}
 .bm-v2 .footer h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);margin:0 0 20px;font-weight:600}
 .bm-v2 .footer a,.bm-v2 .footer p{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#F7EFE8;text-decoration:none;margin:0 0 10px;line-height:1.5}
@@ -314,10 +324,16 @@ body{margin:0}
       <h2>Nail designs from the studio</h2>
     </div>
     <div class="gallery-strip">
-      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img1.webp" alt="Nail design 1">
-      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img2.webp" alt="Nail design 2">
-      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Nagels.jpg" alt="Nail design 3">
-      <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Manicure.jpg" alt="Nail design 4">
+      <div class="gallery-track">
+        <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img1.webp" alt="Nail design 1">
+        <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img2.webp" alt="Nail design 2">
+        <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Nagels.jpg" alt="Nail design 3">
+        <img class="shadow-card reveal" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Manicure.jpg" alt="Nail design 4">
+        <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img1.webp" alt="" aria-hidden="true">
+        <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Nagelstudio-amsterdam-west-img2.webp" alt="" aria-hidden="true">
+        <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Nagels.jpg" alt="" aria-hidden="true">
+        <img class="shadow-card" src="https://www.beauty-by-megan.com/wp-content/uploads/2019/10/Manicure.jpg" alt="" aria-hidden="true">
+      </div>
     </div>
   </section>
 </div>
@@ -344,7 +360,7 @@ body{margin:0}
   <footer class="footer">
     <div class="footer-grid">
       <div>
-        <span class="footer-logo-card"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_TAGLINE2_Warm-Espresso_1922x591px_001.svg" alt="Beauty by Megan"></span>
+        <span class="footer-logo-card"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_Warm-Cream_1876x591px_001.svg" alt="Beauty by Megan"></span>
       </div>
       <div>
         <h4>Treatments</h4>
