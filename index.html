@@ -98,7 +98,8 @@ body{margin:0}
 .bm-v2 .hero2-content{position:relative;z-index:2;padding:80px 64px;max-width:640px}
 .bm-v2 .hero2 h1{font-style:italic;font-weight:500;font-size:56px;line-height:1.12;color:var(--cream);margin-bottom:30px}
 .bm-v2 .hero2-buttons{display:flex;gap:16px;flex-wrap:wrap}
-.bm-v2 .usp-bar{background:var(--rose);color:var(--cream);display:flex;justify-content:center;gap:56px;padding:30px 24px;flex-wrap:wrap;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;overflow:hidden}
+.bm-v2 .usp-bar{background:var(--rose);color:var(--cream);padding:30px 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;overflow:hidden}
+.bm-v2 .usp-bar-inner{max-width:1180px;margin:0 auto;padding:0 64px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px 24px}
 .bm-v2 .usp-bar span{position:relative;padding-left:24px}
 .bm-v2 .usp-bar span::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;background:var(--cream)}
 
@@ -179,7 +180,8 @@ body{margin:0}
   .bm-v2 .hero2{min-height:520px}
   .bm-v2 .hero2-content{padding:40px 26px}
   .bm-v2 .hero2 h1{font-size:38px}
-  .bm-v2 .usp-bar{gap:22px;font-size:10.5px;padding:20px 16px}
+  .bm-v2 .usp-bar{padding:20px 0;font-size:10.5px}
+  .bm-v2 .usp-bar-inner{padding:0 22px;gap:12px 20px}
   .bm-v2 .feature-content{padding:32px}
   .bm-v2 .treat-grid{grid-template-columns:1fr 1fr;gap:24px 18px}
   .bm-v2 .testimonials-wrap{grid-template-columns:1fr}
@@ -224,10 +226,12 @@ body{margin:0}
     </div>
   </div>
   <div class="usp-bar full-bleed">
-    <span>All prices online</span>
-    <span>Open seven days</span>
-    <span>Free consultation</span>
-    <span>Everything under one roof</span>
+    <div class="usp-bar-inner">
+      <span>All prices online</span>
+      <span>Open seven days</span>
+      <span>Free consultation</span>
+      <span>Everything under one roof</span>
+    </div>
   </div>
 </div>
 
@@ -338,7 +342,7 @@ body{margin:0}
 
 <div class="bm-v2">
   <span id="bm-v2-visit" style="display:block;scroll-margin-top:90px"></span>
-  <section>
+  <section style="background:#EDE3D8">
     <div class="visit-wrap">
       <iframe class="shadow-card reveal" loading="lazy" src="https://www.google.com/maps?q=Overtoom+250,+1054+DP+Amsterdam,+Netherlands&output=embed"></iframe>
       <div class="reveal">
