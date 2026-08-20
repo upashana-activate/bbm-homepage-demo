@@ -102,15 +102,26 @@ body{margin:0}
 .bm-v2 .section-head h2{font-style:italic;font-weight:500;font-size:40px}
 .bm-v2 .section-head p{font-style:italic;font-size:15px;line-height:1.6;color:#5a4f48;margin-top:16px}
 
-/* ---- story ---- */
-.bm-v2 .story-wrap{max-width:760px;margin:0 auto;text-align:center}
-.bm-v2 .story-wrap p{font-style:italic;font-size:17px;line-height:1.8;color:#4a423c;margin:0 0 20px}
+/* ---- about us (story) ---- */
+.bm-v2 .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1180px;margin:0 auto}
+.bm-v2 .about-wrap h2{font-style:normal;font-weight:500;font-size:38px;line-height:1.25;margin-bottom:22px}
+.bm-v2 .about-title-accent{font-style:italic;color:var(--rose)}
+.bm-v2 .about-wrap p{font-style:italic;font-size:16px;line-height:1.8;color:#4a423c;max-width:460px}
+.bm-v2 .about-photo{border-radius:2px;overflow:hidden;height:460px}
+.bm-v2 .about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ---- brown quote band ---- */
+.bm-v2 .story-quote-band{background:var(--espresso);color:var(--cream);padding:72px 56px;text-align:center}
+.bm-v2 .story-quote-band .quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:28px;line-height:1.45;max-width:760px;margin:0 auto}
+.bm-v2 .story-quote-band .sub{font-style:italic;font-size:14px;color:#E9DCD3;opacity:.85;margin-top:18px}
 
 /* ---- meet megan ---- */
-.bm-v2 .megan-wrap{display:grid;grid-template-columns:420px 1fr;gap:72px;align-items:center;max-width:1180px;margin:0 auto}
+.bm-v2 .megan-wrap{display:grid;grid-template-columns:420px 1fr;gap:72px;align-items:stretch;max-width:1180px;margin:0 auto}
 .bm-v2 .megan-photo{border-radius:2px;overflow:hidden}
-.bm-v2 .megan-photo img{width:100%;height:520px;object-fit:cover;display:block}
-.bm-v2 .megan-text h2{font-style:italic;font-weight:500;font-size:38px;margin-bottom:20px}
+.bm-v2 .megan-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.bm-v2 .megan-text{display:flex;flex-direction:column;justify-content:center}
+.bm-v2 .megan-text h2{font-style:italic;font-weight:500;font-size:38px;margin-bottom:6px}
+.bm-v2 .megan-text .role-line{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:22px}
 .bm-v2 .megan-text p{font-style:italic;font-size:16px;line-height:1.75;color:#4a423c;margin-bottom:28px;max-width:460px}
 
 /* ---- staff polaroid auto-scroll ---- */
@@ -166,6 +177,11 @@ body{margin:0}
   .bm-v2 .about-hero h1{font-size:36px}
   .bm-v2 .megan-wrap{grid-template-columns:1fr;gap:30px}
   .bm-v2 .megan-photo img{height:340px}
+  .bm-v2 .about-wrap{grid-template-columns:1fr;gap:30px}
+  .bm-v2 .about-photo{height:320px;order:-1}
+  .bm-v2 .about-wrap p{max-width:none}
+  .bm-v2 .story-quote-band{padding:48px 24px}
+  .bm-v2 .story-quote-band .quote{font-size:22px}
   .bm-v2 .visit-wrap{grid-template-columns:1fr;gap:30px}
   .bm-v2 .visit-grid{grid-template-columns:1fr 1fr}
 }
@@ -182,28 +198,39 @@ body{margin:0}
 
 <div class="bm-v2">
   <section>
-    <div class="section-head reveal">
-      <div class="kicker">Our story</div>
-      <h2>Beauty, practiced properly</h2>
-    </div>
-    <div class="story-wrap reveal">
-      <p>Beauty by Megan started with a simple idea: skin and nail care that's done properly, by people who actually trained for it, in a space that feels calm rather than clinical. No rushed appointments, no upsells you didn't ask for. Just skilled hands, honest advice, and treatments that hold up.</p>
-      <p><!-- TODO: replace with real founding story / timeline once Claire confirms copy -->Years on, that hasn't changed. What started as one chair on the Overtoom has grown into a full studio, but the standard is the same: every treatment is done the way we'd want it done on ourselves.</p>
+    <div class="about-wrap reveal">
+      <div>
+        <div class="kicker">About us</div>
+        <h2>Meet the team behind<br><span class="about-title-accent">Beauty By Megan</span></h2>
+        <p>We are not just colleagues. We are people who genuinely love this craft, and it shows in the small things. A treatment room that feels calm the moment you walk in. Full attention, from the first hello to the last touch. We believe beauty is not rushed. It is practiced, with care, every single time. That is what you can expect from us, every visit.</p>
+      </div>
+      <div class="about-photo shadow-card">
+        <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/hero-image.png" alt="The Beauty by Megan team in front of the salon">
+      </div>
     </div>
   </section>
 </div>
 
 <div class="bm-v2">
-  <section style="padding-top:0">
+  <div class="story-quote-band reveal">
+    <div class="quote">"Personal attention and professional work. A relaxed, inspiring place for rejuvenating treatments."</div>
+    <div class="sub">Years of hands on skin, nails and hair, so you always leave looking right and feeling calm</div>
+  </div>
+</div>
+
+<div class="bm-v2">
+  <section>
     <div class="megan-wrap reveal">
       <div class="megan-photo shadow-card">
         <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/PHOTO-2024-05-24-10-58-29.jpg" alt="Megan, founder of Beauty by Megan">
       </div>
       <div class="megan-text">
-        <div class="kicker">Meet the founder</div>
+        <div class="kicker">The founder</div>
         <h2>Megan</h2>
-        <p>Megan founded Beauty by Megan on the idea that real results don't need needles. Trained in aesthetic osteopathy, she treats the face the way an osteopath treats the body: hands-on, structural, unhurried. She still takes clients herself, and every treatment plan in the studio starts with her eye.</p>
-        <a class="btn btn-solid" href="#bm-v2-visit">Book with Megan</a>
+        <div class="role-line">Skin specialist &amp; aesthetic osteopath</div>
+        <p>Megan didn't just create this beauty space. She built it to feel cozy, professional and comfortable for everyone who walks in. For her, beauty is a craft. Precise technique, genuine warmth and visible results, in every appointment, with every client. Her skincare treatments go beyond the basics. It's real attention to detail and care that's personal to you.</p>
+        <p>She'll find the right solution for your skin, guide you on how to treat it, and make sure you love what you see in the mirror. If your skin deserves the best, and it genuinely does, trust Megan. She knows exactly how to take care of it.</p>
+        <a class="btn btn-solid" href="#bm-v2-visit">Book an appointment</a>
       </div>
     </div>
   </section>
