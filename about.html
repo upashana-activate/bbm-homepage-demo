@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Beauty by Megan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0}
+:root{
+  --charcoal:#2E2420;
+  --rose:#C4887A;
+  --taupe:#A89080;
+  --sand:#E8DDD0;
+  --cream:#F5EFE6;
+  --espresso:#381D0E;
+}
+/* ---- floating demo header — sits ON TOP of the hero photo ---- */
+.demo-header{position:absolute;top:0;left:0;right:0;z-index:100;background:transparent;padding:48px 64px;display:flex;align-items:flex-start;justify-content:space-between;font-family:'Inter',sans-serif}
+.demo-lockup{display:block;text-decoration:none}
+.demo-logo{height:100px;width:auto;display:block}
+.demo-tagline{margin:8px 0 0 112px;font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--charcoal);opacity:.7;letter-spacing:.01em}
+.demo-tagline-italic{font-style:italic}
+.demo-right{display:flex;align-items:center;gap:28px;padding-top:8px}
+.demo-pill{border:1px solid var(--charcoal);border-radius:999px;padding:3px;display:flex;font-size:11px;letter-spacing:.12em;background:rgba(245,239,230,.55)}
+.demo-pill span{padding:5px 13px;border-radius:999px;color:var(--charcoal)}
+.demo-pill span.on{background:var(--charcoal);color:var(--cream)}
+.demo-contact{background:var(--rose);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:.14em;text-transform:uppercase;padding:12px 30px;text-decoration:none;transition:background .25s ease}
+.demo-contact:hover{background:var(--charcoal)}
+.demo-burger{width:34px;height:24px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;background:none;border:none;padding:0}
+.demo-burger span{display:block;height:3px;background:var(--cream);border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+.demo-menu{display:none;position:absolute;top:100%;right:48px;margin-top:10px;background:var(--cream);box-shadow:0 18px 44px rgba(46,36,32,.18);padding:26px 36px;min-width:220px}
+.demo-menu.open{display:block}
+.demo-menu a{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--charcoal);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--sand)}
+.demo-menu a:last-child{border-bottom:none}
+.demo-menu a:hover{color:var(--rose)}
+@media (max-width:820px){
+  .demo-header{padding:20px 24px;top:0}
+  .demo-logo{height:60px}
+  .demo-tagline{margin-left:64px;font-size:10.5px}
+  .demo-contact{padding:9px 18px;font-size:14px}
+  .demo-right{gap:12px;padding-top:4px}
+  .demo-menu{right:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-header">
+  <a class="demo-lockup" href="index.html">
+    <img class="demo-logo" src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_Warm-Espresso_1876x591px_001.svg" alt="Beauty by Megan">
+    <div class="demo-tagline">Beauty, practiced. <span class="demo-tagline-italic">Beauty, reimagined.</span></div>
+  </a>
+  <div class="demo-right">
+    <span class="demo-pill"><span class="on">EN</span><span>NL</span></span>
+    <a class="demo-contact" href="#bm-v2-visit">Contact</a>
+    <button class="demo-burger" id="demoBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="demo-menu" id="demoMenu">
+      <a href="index.html">Home</a>
+      <a href="index.html#bm-v2-treatments">Treatments</a>
+      <a href="about.html">About</a>
+      <a href="index.html#bm-v2-gallery">Gallery</a>
+      <a href="#bm-v2-visit">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<style id="bm-v2-style">
+.bm-v2, .bm-v2 *{box-sizing:border-box}
+.bm-v2{background:var(--cream);color:var(--charcoal);font-family:'Inter',Arial,sans-serif;font-weight:300}
+.bm-v2 h1,.bm-v2 h2,.bm-v2 h3{font-family:'Cormorant Garamond',serif;color:var(--charcoal);margin:0}
+.bm-v2 a{color:inherit;text-decoration:none}
+.bm-v2 .kicker{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;font-weight:500}
+.bm-v2 .eyebrow-row{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--charcoal);font-weight:500;margin-bottom:14px}
+
+.bm-v2 .full-bleed{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+
+.bm-v2 .btn{display:inline-block;padding:15px 32px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:pointer;border:1px solid transparent;transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease}
+.bm-v2 .btn-solid{background:var(--rose);color:var(--cream);box-shadow:0 10px 24px rgba(196,136,122,.35)}
+.bm-v2 .btn-solid:hover{background:var(--charcoal);box-shadow:0 14px 30px rgba(46,36,32,.28);transform:translateY(-2px)}
+.bm-v2 .btn-ghost{background:rgba(245,239,230,.15);color:var(--cream);border-color:rgba(245,239,230,.7);backdrop-filter:blur(2px)}
+.bm-v2 .btn-ghost:hover{background:var(--cream);color:var(--charcoal);transform:translateY(-2px)}
+.bm-v2 .btn-outline{background:transparent;color:var(--charcoal);border-color:var(--charcoal)}
+.bm-v2 .btn-outline:hover{background:var(--charcoal);color:var(--cream);transform:translateY(-2px)}
+
+.bm-v2 .shadow-card{box-shadow:0 10px 28px rgba(46,36,32,.10);transition:box-shadow .35s ease, transform .35s ease}
+.bm-v2 .shadow-card:hover{box-shadow:0 22px 46px rgba(46,36,32,.18);transform:translateY(-5px)}
+
+/* ---- hero ---- */
+.bm-v2 .about-hero{position:relative;min-height:560px;display:flex;align-items:flex-end;background-image:url('https://www.beauty-by-megan.com/wp-content/uploads/2026/08/hero-image.png');background-size:cover;background-position:center 30%;overflow:hidden}
+.bm-v2 .about-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg, rgba(46,36,32,.62) 0%, rgba(46,36,32,.30) 38%, rgba(46,36,32,0) 62%)}
+.bm-v2 .about-hero-content{position:relative;z-index:2;padding:80px 64px;max-width:640px}
+.bm-v2 .about-hero h1{font-style:italic;font-weight:500;font-size:52px;line-height:1.14;color:var(--cream);margin-bottom:16px}
+.bm-v2 .about-hero p{font-style:italic;font-size:16px;line-height:1.6;color:#EFE6DD;max-width:480px}
+
+.bm-v2 section{padding:96px 56px}
+.bm-v2 .section-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.bm-v2 .section-head h2{font-style:italic;font-weight:500;font-size:40px}
+.bm-v2 .section-head p{font-style:italic;font-size:15px;line-height:1.6;color:#5a4f48;margin-top:16px}
+
+/* ---- story ---- */
+.bm-v2 .story-wrap{max-width:760px;margin:0 auto;text-align:center}
+.bm-v2 .story-wrap p{font-style:italic;font-size:17px;line-height:1.8;color:#4a423c;margin:0 0 20px}
+
+/* ---- meet megan ---- */
+.bm-v2 .megan-wrap{display:grid;grid-template-columns:420px 1fr;gap:72px;align-items:center;max-width:1180px;margin:0 auto}
+.bm-v2 .megan-photo{border-radius:2px;overflow:hidden}
+.bm-v2 .megan-photo img{width:100%;height:520px;object-fit:cover;display:block}
+.bm-v2 .megan-text h2{font-style:italic;font-weight:500;font-size:38px;margin-bottom:20px}
+.bm-v2 .megan-text p{font-style:italic;font-size:16px;line-height:1.75;color:#4a423c;margin-bottom:28px;max-width:460px}
+
+/* ---- staff polaroid auto-scroll ---- */
+.bm-v2 .staff-section{background:var(--sand)}
+.bm-v2 .staff-strip{overflow:hidden;padding:20px 4px 30px;max-width:1180px;margin:0 auto}
+.bm-v2 .staff-track{display:flex;gap:40px;width:max-content;animation:bm-staff-scroll 34s linear infinite}
+.bm-v2 .staff-strip:hover .staff-track{animation-play-state:paused}
+.bm-v2 .polaroid{background:#fff;padding:14px 14px 0;flex:0 0 260px;box-shadow:0 14px 30px rgba(46,36,32,.14)}
+.bm-v2 .polaroid:nth-child(odd){transform:rotate(-1.6deg)}
+.bm-v2 .polaroid:nth-child(even){transform:rotate(1.4deg)}
+.bm-v2 .polaroid img{width:100%;height:260px;object-fit:cover;display:block}
+.bm-v2 .polaroid-caption{padding:16px 6px 20px;text-align:center}
+.bm-v2 .polaroid-caption .name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:20px;color:var(--charcoal)}
+.bm-v2 .polaroid-caption .role{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin:4px 0 8px;font-weight:600}
+.bm-v2 .polaroid-caption .bio{font-style:italic;font-size:12.5px;line-height:1.55;color:#5a4f48}
+@keyframes bm-staff-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .bm-v2 .staff-track{animation:none}
+}
+
+/* ---- visit / map ---- */
+.bm-v2 .visit-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1180px;margin:0 auto;align-items:center}
+.bm-v2 .visit-wrap iframe{width:100%;height:420px;border:0;filter:grayscale(20%) contrast(1.02)}
+.bm-v2 .visit-wrap h2{font-style:italic;font-weight:500;font-size:36px;margin-bottom:28px}
+.bm-v2 .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.bm-v2 .visit-grid h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-weight:600}
+.bm-v2 .visit-grid p{margin:0;font-style:italic;font-size:13.5px;line-height:1.5;color:var(--charcoal)}
+
+/* ---- footer ---- */
+.bm-v2 .footer{background:var(--espresso);color:var(--cream);padding:80px 56px 40px}
+.bm-v2 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto 56px;align-items:start}
+.bm-v2 .footer-logo-card{display:inline-block}
+.bm-v2 .footer-logo-card img{height:64px;width:auto;display:block}
+.bm-v2 .footer-tagline{font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:20px;color:var(--cream);margin:14px 0 0}
+.bm-v2 .footer h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);margin:0 0 20px;font-weight:600}
+.bm-v2 .footer a,.bm-v2 .footer p{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#F7EFE8;text-decoration:none;margin:0 0 10px;line-height:1.5}
+.bm-v2 .footer a:hover{color:var(--charcoal)}
+.bm-v2 .footer .copyright{text-align:center;font-family:'Inter',sans-serif;font-size:12px;font-style:normal;color:#F0E4DC;border-top:1px solid rgba(245,239,230,.35);padding-top:26px;max-width:1180px;margin:0 auto}
+.bm-v2 .footer .copyright a{display:inline;font-family:'Inter',sans-serif;font-style:normal;font-size:12px;color:#F0E4DC;margin:0}
+@media (max-width:900px){
+  .bm-v2 .footer{padding:56px 22px 30px}
+  .bm-v2 .footer-grid{grid-template-columns:1fr 1fr;gap:34px}
+}
+
+/* ---- scroll-in reveal ---- */
+.bm-v2 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)}
+.bm-v2 .reveal.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .bm-v2 section{padding:56px 22px}
+  .bm-v2 .about-hero{min-height:440px}
+  .bm-v2 .about-hero-content{padding:40px 26px}
+  .bm-v2 .about-hero h1{font-size:36px}
+  .bm-v2 .megan-wrap{grid-template-columns:1fr;gap:30px}
+  .bm-v2 .megan-photo img{height:340px}
+  .bm-v2 .visit-wrap{grid-template-columns:1fr;gap:30px}
+  .bm-v2 .visit-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+
+<div class="bm-v2">
+  <div class="about-hero full-bleed">
+    <div class="about-hero-content">
+      <h1>The people behind the treatments</h1>
+      <p>Every visit starts with a team that trained for it. Meet the hands you'll actually see.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bm-v2">
+  <section>
+    <div class="section-head reveal">
+      <div class="kicker">Our story</div>
+      <h2>Beauty, practiced properly</h2>
+    </div>
+    <div class="story-wrap reveal">
+      <p>Beauty by Megan started with a simple idea: skin and nail care that's done properly, by people who actually trained for it, in a space that feels calm rather than clinical. No rushed appointments, no upsells you didn't ask for. Just skilled hands, honest advice, and treatments that hold up.</p>
+      <p><!-- TODO: replace with real founding story / timeline once Claire confirms copy -->Years on, that hasn't changed. What started as one chair on the Overtoom has grown into a full studio, but the standard is the same: every treatment is done the way we'd want it done on ourselves.</p>
+    </div>
+  </section>
+</div>
+
+<div class="bm-v2">
+  <section style="padding-top:0">
+    <div class="megan-wrap reveal">
+      <div class="megan-photo shadow-card">
+        <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/PHOTO-2024-05-24-10-58-29.jpg" alt="Megan, founder of Beauty by Megan">
+      </div>
+      <div class="megan-text">
+        <div class="kicker">Meet the founder</div>
+        <h2>Megan</h2>
+        <p>Megan founded Beauty by Megan on the idea that real results don't need needles. Trained in aesthetic osteopathy, she treats the face the way an osteopath treats the body: hands-on, structural, unhurried. She still takes clients herself, and every treatment plan in the studio starts with her eye.</p>
+        <a class="btn btn-solid" href="#bm-v2-visit">Book with Megan</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="bm-v2 staff-section">
+  <section>
+    <div class="section-head reveal">
+      <div class="kicker">Our specialists</div>
+      <h2>The team</h2>
+    </div>
+    <div class="staff-strip">
+      <div class="staff-track">
+        <div class="polaroid">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-2-scaled.png" alt="Yanina, nail and pedicure specialist">
+          <div class="polaroid-caption">
+            <div class="name">Yanina</div>
+            <div class="role">Argentina · Nails &amp; pedicures</div>
+            <div class="bio">Trained as a foot reflexologist before falling into nails, and it shows. Her pedicures and manicures are unhurried and exact, and her BIAB holds up. Clients come back for the precision, they stay for how at ease she makes you feel in the chair.</div>
+          </div>
+        </div>
+        <div class="polaroid">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-4-scaled.png" alt="Oana, waxing and sugaring specialist">
+          <div class="polaroid-caption">
+            <div class="name">Oana</div>
+            <div class="role">Romania · Waxing &amp; sugaring</div>
+            <div class="bio">Years of waxing and sugaring experience, and a gentle touch that regulars specifically ask for. She's particular about hygiene and comfort in the treatment rooms, the kind of care you only notice because it's always there.</div>
+          </div>
+        </div>
+        <div class="polaroid">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-4-1-scaled-e1787214195519.png" alt="Emma, manicure and BIAB specialist">
+          <div class="polaroid-caption">
+            <div class="name">Emma</div>
+            <div class="role">Serbia · Manicure &amp; BIAB</div>
+            <div class="bio">A jeweller's eye for detail: her BIAB and manicure work is famously neat. She's also just lovely to sit with, which makes the hour go fast.</div>
+          </div>
+        </div>
+        <div class="polaroid">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-3.png" alt="Valeria, nail art specialist">
+          <div class="polaroid-caption">
+            <div class="name">Valeria</div>
+            <div class="role">Latvia · Nail art &amp; extensions</div>
+            <div class="bio">Specializes in gel extensions and nail art. If you've got a design in mind, or no idea and want inspiration, she's the one to ask. Her manicures and pedicures are just as sharp; the art is where she really gets to play.</div>
+          </div>
+        </div>
+        <!-- TODO: Vita needs a photo — placeholder card below, swap the src once the 5th image is sent -->
+        <div class="polaroid">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-2-scaled.png" alt="Vita, manicure specialist, photo pending">
+          <div class="polaroid-caption">
+            <div class="name">Vita</div>
+            <div class="role">Ukraine · Manicure &amp; gel extensions</div>
+            <div class="bio">A highly skilled manicurist, and it shows in everything from a classic manicure to gel extensions and BIAB, plus pedicures. Meticulous about the small stuff, the details most people don't notice until they're perfect.</div>
+          </div>
+        </div>
+        <!-- duplicate set for seamless loop -->
+        <div class="polaroid" aria-hidden="true">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-2-scaled.png" alt="">
+          <div class="polaroid-caption"><div class="name">Yanina</div><div class="role">Argentina · Nails &amp; pedicures</div><div class="bio">Trained as a foot reflexologist before falling into nails, and it shows. Her pedicures and manicures are unhurried and exact, and her BIAB holds up.</div></div>
+        </div>
+        <div class="polaroid" aria-hidden="true">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-4-scaled.png" alt="">
+          <div class="polaroid-caption"><div class="name">Oana</div><div class="role">Romania · Waxing &amp; sugaring</div><div class="bio">Years of waxing and sugaring experience, and a gentle touch that regulars specifically ask for.</div></div>
+        </div>
+        <div class="polaroid" aria-hidden="true">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-4-1-scaled-e1787214195519.png" alt="">
+          <div class="polaroid-caption"><div class="name">Emma</div><div class="role">Serbia · Manicure &amp; BIAB</div><div class="bio">A jeweller's eye for detail: her BIAB and manicure work is famously neat.</div></div>
+        </div>
+        <div class="polaroid" aria-hidden="true">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-3.png" alt="">
+          <div class="polaroid-caption"><div class="name">Valeria</div><div class="role">Latvia · Nail art &amp; extensions</div><div class="bio">Specializes in gel extensions and nail art.</div></div>
+        </div>
+        <div class="polaroid" aria-hidden="true">
+          <img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/Staff-2-scaled.png" alt="">
+          <div class="polaroid-caption"><div class="name">Vita</div><div class="role">Ukraine · Manicure &amp; gel extensions</div><div class="bio">A highly skilled manicurist across manicure, gel extensions, BIAB and pedicures.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="bm-v2">
+  <span id="bm-v2-visit" style="display:block;scroll-margin-top:90px"></span>
+  <section style="background:var(--sand)">
+    <div class="visit-wrap">
+      <iframe class="shadow-card reveal" loading="lazy" src="https://www.google.com/maps?q=Overtoom+250,+1054+DP+Amsterdam,+Netherlands&output=embed"></iframe>
+      <div class="reveal">
+        <div class="kicker">Visit us</div>
+        <h2>On the Overtoom, Amsterdam West</h2>
+        <div class="visit-grid">
+          <div><h4>Address</h4><p>Overtoom 250<br>1054 DP Amsterdam</p></div>
+          <div><h4>Hours</h4><p>Monday–Sunday<br>10:00–20:00</p></div>
+          <div><h4>Contact</h4><p><a href="tel:+31611536328">+31 (0)6 11 53 63 28</a></p></div>
+          <div><h4>Email us</h4><p><a href="mailto:info@beauty-by-megan.com">info@beauty-by-megan.com</a></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <span class="footer-logo-card"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2607-SG-13_BS_LOGO_Warm-Cream_1876x591px_001.svg" alt="Beauty by Megan"></span>
+        <div class="footer-tagline">Beauty, re-imagined.</div>
+      </div>
+      <div>
+        <h4>Treatments</h4>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/">Structural Facial</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/">Facial</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/nails/">Nails &amp; BIAB</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/wenkbrauwen-wimpers/">Brows &amp; lashes</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/waxen-sugaring/">Waxing &amp; Sugaring</a>
+        <a href="https://www.beauty-by-megan.com/en/behandeling-groep/laser-hair-removal/">Laser hair removal</a>
+      </div>
+      <div>
+        <h4>Salon</h4>
+        <!-- TODO: link About Megan / Products / Gift cards once those pages exist -->
+        <a href="about.html">About Megan</a>
+        <a href="#">Products</a>
+        <a href="#">Gift cards</a>
+        <a href="https://www.beauty-by-megan.com/en/vacatures/">Vacancies</a>
+        <a href="#bm-v2-visit">Contacts</a>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>Overtoom 250<br>1054 DP Amsterdam</p>
+        <h4 style="margin-top:26px">Social</h4>
+        <a href="https://instagram.com/beauty_by_megan" target="_blank" rel="noopener">beauty_by_megan</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Beauty by Megan · <a href="https://www.beauty-by-megan.com/en/privacy-statement/">Privacy Statement</a></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b = document.getElementById('demoBurger'), m = document.getElementById('demoMenu');
+  if(b && m){
+    b.addEventListener('click', function(e){ e.stopPropagation(); m.classList.toggle('open'); });
+    document.addEventListener('click', function(){ m.classList.remove('open'); });
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var t = document.getElementById(id);
+      if(!t) return;
+      e.preventDefault();
+      var y = t.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({top:y, behavior:'smooth'});
+    });
+  });
+
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && reveals.length){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
