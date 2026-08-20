@@ -115,10 +115,14 @@ body{margin:0}
 .bm-v2 .feature-content p{font-style:italic;font-size:15px;line-height:1.6;color:#EFE6DD;margin-bottom:26px}
 
 .bm-v2 .treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:64px 56px;max-width:1180px;margin:0 auto}
-.bm-v2 .treat-card{position:relative;aspect-ratio:1/1;border-radius:2px;overflow:hidden;display:flex;align-items:flex-end;padding:30px}
-.bm-v2 .treat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.bm-v2 .treat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(196,136,122,0) 50%, rgba(166,116,102,.45) 100%)}
-.bm-v2 .treat-card span{position:relative;z-index:2;color:var(--cream);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;line-height:1.25}
+.bm-v2 .treat-card{position:relative;aspect-ratio:1/1;border-radius:2px;overflow:hidden;display:flex;align-items:flex-end;padding:30px;cursor:pointer}
+.bm-v2 .treat-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.bm-v2 .treat-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(196,136,122,0) 50%, rgba(166,116,102,.45) 100%);transition:background .35s ease}
+.bm-v2 .treat-card span{position:relative;z-index:2;color:var(--cream);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;line-height:1.25;transition:transform .35s ease}
+.bm-v2 .treat-card:hover{box-shadow:0 20px 40px rgba(46,36,32,.24);transform:translateY(-4px)}
+.bm-v2 .treat-card:hover img{transform:scale(1.08)}
+.bm-v2 .treat-card:hover::after{background:linear-gradient(180deg, rgba(196,136,122,0) 32%, rgba(166,116,102,.62) 100%)}
+.bm-v2 .treat-card:hover span{transform:translateY(-3px)}
 
 .bm-v2 .consult-strip{background:var(--rose);color:var(--cream);margin-top:64px;padding:38px 0}
 .bm-v2 .consult-strip-inner{max-width:1180px;margin:0 auto;padding:0 56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
@@ -247,17 +251,17 @@ body{margin:0}
         <div class="eyebrow-row"><span>Signature</span><span>Aesthetic osteopathy</span></div>
         <h3>Structural Facial Lift</h3>
         <p>No needles, no fillers. Intelligent hands-on work that releases deep fascial tension, rebalances symmetry and restores natural lift.</p>
-        <a class="btn btn-solid" href="/en/behandeling-groep/gezichtsbehandelingen/">Discover the lift</a>
+        <a class="btn btn-solid" href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/" target="_blank" rel="noopener">Discover the lift</a>
       </div>
     </div>
 
     <div class="treat-grid">
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/gezichtsbehandelingen/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_A_001.jpg" alt="Facial treatment at Beauty by Megan"><span>Facials</span></a>
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/nails/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_B_001.jpg" alt="Nail treatment: BIAB and gel nails"><span>Nails</span></a>
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/laser-hair-removal/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Laser-ontharen-amsterdam-img1.webp" alt="Laser hair removal treatment"><span>Laser hair removal</span></a>
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/wenkbrauwen-wimpers/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_D_001.jpg" alt="Brow shaping and lash treatment"><span>Brows &amp; Lashes</span></a>
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/waxen-sugaring/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_E_001.jpg" alt="Waxing and sugaring treatment"><span>Waxing &amp; Sugaring</span></a>
-      <a class="treat-card shadow-card reveal" href="/en/behandeling-groep/massage/"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_C_001.jpg" alt="Relaxing massage treatment"><span>Massage</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/gezichtsbehandelingen/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_A_001.jpg" alt="Facial treatment at Beauty by Megan"><span>Facials</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/nails/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_B_001.jpg" alt="Nail treatment: BIAB and gel nails"><span>Nails</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/laser-hair-removal/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2024/08/Laser-ontharen-amsterdam-img1.webp" alt="Laser hair removal treatment"><span>Laser hair removal</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/wenkbrauwen-wimpers/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_D_001.jpg" alt="Brow shaping and lash treatment"><span>Brows &amp; Lashes</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/waxen-sugaring/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_E_001.jpg" alt="Waxing and sugaring treatment"><span>Waxing &amp; Sugaring</span></a>
+      <a class="treat-card shadow-card reveal" href="https://www.beauty-by-megan.com/en/behandeling-groep/massage/" target="_blank" rel="noopener"><img src="https://www.beauty-by-megan.com/wp-content/uploads/2026/08/2608-SG-15_LE_800x800_C_001.jpg" alt="Relaxing massage treatment"><span>Massage</span></a>
     </div>
 
     <div class="consult-strip full-bleed shadow-card">
